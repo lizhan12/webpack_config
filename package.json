@@ -1,5 +1,5 @@
 {
-  "name": "webpack-config",
+  "name": "webpack-config-dev",
   "version": "2.0.1",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,9 @@
   "scripts": {
     "test1": "istanbul cover ./node_modules/.bin/_mocha",
     "test": "mocha",
-    "build": "webpack --config ./lib/webpack.prod.js"
+    "build": "webpack --config ./lib/webpack.prod.js",
+    "commitmsg": "validate-commit-msg",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "author": "",
   "license": "ISC",
@@ -55,6 +57,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "glob-all": "^3.1.0",
+    "husky": "^4.2.5",
     "istanbul": "^0.4.5",
     "mocha": "^6.1.4",
     "rimraf": "^2.6.3"
